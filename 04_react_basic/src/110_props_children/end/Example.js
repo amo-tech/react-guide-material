@@ -17,11 +17,11 @@ const Example = () => {
         <Profile key={profile[1].name} {...profile[1]} />
       </Container>
 
-      <Container
+      {/* <Container
         title="個別渡す"
         first={<Profile key={profile[0].name} {...profile[1]} />}
         second={<Profile key={profile[1].name} {...profile[0]} />}
-      />
+      /> */}
     </div>
   );
 };
