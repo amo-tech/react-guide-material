@@ -4,11 +4,13 @@
 import Bye from "./components/Bye"
 import Hello from "./components/Hello"
 
+const hisName = "TOM" 
+
 const Example = () => {
   return (
     <>
-      <Hello />
-      <Bye />
+      <Hello name={hisName}/>
+      <Bye name={hisName}/>
     </>
   );
 };
