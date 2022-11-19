@@ -6,7 +6,8 @@ const Example = () => {
   // React.createElement("h1", {
   //   className: "greeting"
   // }, "Hello World");
-
+  // JSXとは ReactによるJavaScriptの構文を拡張したもの。
+  // htmlのように書かれるがJSXはJSのオブジェクトに変換される。コンポーネントもReact要素。
   const sample2 = (
     <div>
       <h1>Hello!</h1>
