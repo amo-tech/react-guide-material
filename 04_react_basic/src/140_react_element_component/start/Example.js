@@ -12,6 +12,9 @@ const Example = () => {
   );
 };
 
+// htmlタグで囲まれた部分BABELで変換される(React.createElement)→
+// htmlタグはtypeになり、要素はpropsの中でchildrenになる
+
 console.log(Example());
 
 export default Example;
