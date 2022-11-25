@@ -4,8 +4,8 @@ const Example = () => {
   const personObj = { name: "Tom", age: 18 };
   const [person, setPerson] = useState({ name: "TOM", age: 18});
 
-  const chageName = () => {
-
+  const chageName = (e) => {
+    setPerson({name: e.target.value, age: person.age})
   };
   return(
     <>
