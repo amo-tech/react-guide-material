@@ -15,6 +15,7 @@ const Example = () => {
 
 const Count = ({title}) => {
   const [count, setCount] = useState(0);
+  // important!!memo!! useCallback
   const countUp = useCallback(() => {
     setCount((prevstate) => prevstate + 1);
   }, []);
