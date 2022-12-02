@@ -1,6 +1,6 @@
 const AnimalItems = ({animal}) => {
     return (
-        <li key={animal}>
+        <li>
             {animal}
             {animal === "Dog" && "★"}
         </li>

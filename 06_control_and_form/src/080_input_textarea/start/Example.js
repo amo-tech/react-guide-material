@@ -1,10 +1,17 @@
+import { useState} from "react";
+
 const Example = () => {
+  const [val, setVal] = useState("");
   return (
-    <p style={{ textAlign: "center" }}>
-      startフォルダの内容が表示されます。
+    <>
+      <label htmlFor="2">label</label>
+      <div>
+      <input id="1" placeholder="Hello" value={val} onChange={(e) => setVal(e.target.value)} />
+      <textarea id="2" placeholder="Hello" value={val} onChange={(e) => setVal(e.target.value)} />
+      </div>
       <br />
-      練習用に使ってください！
-    </p>
+      <button>Clear</button>
+    </>
   );
 };
 
