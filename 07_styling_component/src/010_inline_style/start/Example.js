@@ -5,10 +5,10 @@ const Example = () => {
 
     const clickHandler = () => setIsSelected(prev => !prev);
     const style = {
-        margin: "auto",
+        margin: "0 auto",
         width: 120,
         height: 60,
-        display: "blocked",
+        display: "block",
         fontWeight: "bold",
         borderRadius: 9999,
         cursor: "pointer",
