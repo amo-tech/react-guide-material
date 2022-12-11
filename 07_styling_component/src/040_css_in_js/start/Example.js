@@ -13,6 +13,16 @@ const StyledButton = styled.button`
     background: ${({isSelected}) => isSelected ? "pink" : ""};
 `;
 
+const OrangeButton = styled(StyledButton)`
+  background-color: orange;
+
+  :hover {
+    color: red;
+    opacity: 0.7;
+  }
+  
+`;
+
 const Example = () => {
   const [isSelected, setIsSelected] = useState(false);
 
@@ -21,9 +31,7 @@ const Example = () => {
   return (
     <>
       <StyledButton isSelected={isSelected} onClick={clickHandler}>button</StyledButton>
-      <button className={`btn ${isSelected ? "selected" : ""}`} onClick={clickHandler}>
-        ボタン
-      </button>
+      <OrangeButton onClick={clickHandler}>subbutton</OrangeButton>
       <div style={{ textAlign: "center" }}>
         {isSelected && "クリックされました。"}
       </div>
