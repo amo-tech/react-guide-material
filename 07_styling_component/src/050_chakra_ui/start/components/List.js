@@ -1,4 +1,6 @@
-import { StackDivider, VStack } from "@chakra-ui/layout";
+import { IconButton } from "@chakra-ui/button";
+import { HStack, StackDivider, VStack } from "@chakra-ui/layout";
+import { VscCheck } from "react-icons/vsc";
 
 const List = ({todos, deleteTodo}) => {
     const complete = (id) => {
@@ -15,11 +17,19 @@ const List = ({todos, deleteTodo}) => {
         >
             {todos.map(todo => {
                 return (
-                    <div key={todo.id}>
-                        <button onClick={() => complete(todo.id)}>完了</button>
+                    <HStack key={todo.id} spacing="5">
+                        <IconButton 
+                            onClick={() => complete(todo.id)}
+                            icon={<VscCheck />}
+                            isRound
+                            bgColor="cyan.100"
+                            opacity="0.5"
+                        >
+                        完了
+                        </IconButton>
                         <span>{todo.content}</span>
-                    </div>
-                )
+                    </HStack>
+                );
             })}
         </VStack>
     );
