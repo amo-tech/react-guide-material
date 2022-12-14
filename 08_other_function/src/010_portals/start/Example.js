@@ -15,7 +15,7 @@ import Modal from "./components/Modal";
 */
 
 const ModalPortal = ({children}) => {
-  const target = document.querySelector("container,star")
+  const target = document.querySelector(".container.start")
   return createPortal(children, target)
 };
 
@@ -32,13 +32,11 @@ const Example = () => {
       >
         モーダルを表示する
       </button>
-      {modalOpen && 
-      (
+      {modalOpen && (
         <ModalPortal>
           <Modal handleCloseClick={() => setModalOpen(false)} />
         </ModalPortal>
-      )
-      }
+      )}
     </div>
   );
 };
